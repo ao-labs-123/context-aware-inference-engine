@@ -1,4 +1,5 @@
-※Core logic and structural analysis for Japanese dialogue are documented here. The underlying architecture is designed to be language-agnostic.
+※Core logic and structural analysis for Japanese dialogue are documented here. 
+The underlying architecture is designed to be language-agnostic.
 
 本研究は、大規模言語モデルのような統計的生成AIに依存せず、会話や出来事の「文脈」を論理的に圧縮・推定する軽量な基盤AIの可能性を示すものである。
 
