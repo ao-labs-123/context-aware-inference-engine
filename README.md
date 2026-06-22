@@ -1,8 +1,5 @@
 # Context Aware Inference Engine
 
-
-⸻
-
 ## Background
 
 Most existing conversational AI systems rely heavily on morphological analysis and statistical methods.
