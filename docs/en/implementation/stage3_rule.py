@@ -1,17 +1,17 @@
-##Overview
+## Overview
 Stage 3 enables the dialogue AI to interpret sentences and utterances not merely as sequences of words, but as chains of causal relationships.
 This implementation forms the foundation for reducing misinterpretation by explicitly modeling cause-and-effect reasoning.
 
 ⸻
 
-##Objectives
+## Objectives
 	•	Infer cause → effect relationships within context
 	•	Improve judgment accuracy and clarification strategies
 	•	Provide a reusable reasoning layer for multiple AI domains
 
 ⸻
 
-##Processing Flow (Conceptual)
+## Processing Flow (Conceptual)
 	1.	Event Extraction
 	•	Identify events, actions, and states from input
 	•	e.g., “was running”, “fell down”, “it was raining”
@@ -30,7 +30,7 @@ This implementation forms the foundation for reducing misinterpretation by expli
 
 ⸻
 
-##Key Characteristics
+## Key Characteristics
 	•	Non-deterministic by design
 → Prevents premature conclusions
 	•	Enables structural reasoning without full reliance on deep learning
@@ -38,7 +38,7 @@ This implementation forms the foundation for reducing misinterpretation by expli
 
 ⸻
 
-##Potential Applications
+## Potential Applications
 	•	Misinterpretation-resistant dialogue systems
 	•	Surveillance and safety monitoring AI
 	•	Scam and impersonation detection
