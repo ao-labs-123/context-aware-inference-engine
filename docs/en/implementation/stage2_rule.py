@@ -1,6 +1,6 @@
-#Implementation Notes – Stage 2
+# Implementation Notes – Stage 2
 
-##Purpose
+## Purpose
 
 This implementation corresponds to Stage 2: Clarification-Based Prevention of Misinterpretation.
 
@@ -10,7 +10,7 @@ This module explicitly prioritizes confirmation over probabilistic inference.
 
 ⸻
 
-##Design Principles
+## Design Principles
 	1.	Interpretation Deferral
 When the subject of a sentence is omitted or ambiguous, the system refrains from selecting the most probable interpretation.
 	2.	Ambiguity Detection Before Inference
@@ -26,7 +26,7 @@ These processes are intentionally deferred to later stages.
 
 ⸻
 
-##Processing Flow
+## Processing Flow
 	1.	Analyze input for subject omission or ambiguity
 	2.	Evaluate whether the subject can be uniquely determined from context
 	3.	If not:
@@ -34,7 +34,7 @@ These processes are intentionally deferred to later stages.
 	•	generate a clarification question
 	4.	Await user confirmation before passing the input to the next stage
 
-##Example
+## Example
 
 User Input
 Yesterday was really tough.
@@ -42,7 +42,7 @@ Yesterday was really tough.
 System Response
 Are you referring to something that happened to you personally?
 
-##Expected Benefits
+## Expected Benefits
 	•	Significant reduction of misinterpretation
 	•	Improved faithfulness to user intent
 	•	Applicability to high-stakes domains such as:
@@ -52,7 +52,7 @@ Are you referring to something that happened to you personally?
 
 ⸻
 
-##Scope Limitation
+## Scope Limitation
 
 This implementation intentionally avoids heuristic guessing, even when statistical likelihood appears high.
 
