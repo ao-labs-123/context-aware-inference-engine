@@ -1,6 +1,6 @@
-#Stage 5: Noun Case Relation Estimation
+# Stage 5: Noun Case Relation Estimation
 
-##Objective
+## Objective
 Stage 5 aims to explicitly estimate case relations between nouns in a sentence,
 clarifying semantic roles such as:
 	•	Agent (who)
@@ -11,7 +11,7 @@ clarifying semantic roles such as:
 
 This step stabilizes sentence-level meaning interpretation and prevents semantic misreading.
 
-##Background
+## Background
 Traditional morphological or dependency parsing can identify grammatical links,
 but often fails to determine semantic roles accurately.
 
@@ -19,13 +19,13 @@ This stage reinterprets:
 	•	noun + particle + verb combinations
 into explicit semantic case relations, closer to human language understanding.
 
-##Process
+## Process
 	•	Use particles (ga, wo, ni, de, e, kara, made, etc.) as primary cues
 	•	Map noun-verb relations to semantic case frames
 	•	Validate consistency with verb semantics
 	•	Reduce confidence instead of forcing interpretation when ambiguity remains
 
-##Benefits
+## Benefits
 	•	Reduced dialogue misunderstanding
 	•	Improved machine translation accuracy
 	•	More natural speech synthesis
