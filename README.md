@@ -1,6 +1,5 @@
-## Project Title
+# Context Aware Inference Engine
 
-A Contextual and Structural Approach to Misinterpretation Reduction in Conversational AI
 
 ⸻
 
