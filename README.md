@@ -33,6 +33,38 @@ semantic and grammatical understanding.
 
 ⸻
 
+## Repository Structure
+
+```repository
+
+├── docs
+│    ├── implementation
+│    │    ├── stage1_rule.py
+│    │    ├── stage2_rule.py 
+│    │    ├── stage3_rule.py
+│    │    ├── stage4_rule.py
+│    │    └── stage5_rule.py
+│    │       
+│    ├── ROADMAP.md
+│    ├── stage1_design.md
+│    ├── stage2_design.md
+│    ├── stage3_design.md
+│    ├── stage4_design.md
+│    └── stage5_design.md  
+│
+├── src
+│   ├── step1_demo.py
+│   ├── step2_demo.py   
+│   ├── step3_demo.py 
+│   ├── step4_demo.py
+│   └── step5_demo.py
+│
+├── README.md
+└── LICENSE
+
+```
+
+
 ## Scope / Limitation
 
 Scope
