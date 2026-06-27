@@ -7,7 +7,7 @@ The project evolves in clear multi-stage phases to ensure transparency, reproduc
 ---
 
 ##  Phase 1 — Logical Subject & Perspective Inference Engine. (Current Phase)
-**Goal:** 
+**Goal:** Build a lightweight design that does not depend on statistics.
 
 ### Tasks
 - Design rule-based + probabilistic interpretation filters  
