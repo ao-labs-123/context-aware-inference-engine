@@ -1,22 +1,26 @@
-# Context Aware Inference Engine
+# Logic-based Linguistic Compression Engine
+Minimalist, Explainable, and Efficient AI for Contextual Understanding.
+Core Philosophy
+Traditional AI relies on massive statistical models (LLMs) to predict the next word, often leading to "black box" decisions, high computational costs, and conversational misinterpretations. This project takes a different path: Deterministic Logical Abstraction.
+By codifying the structural and cognitive rules of language into a lightweight engine, we achieve human-level contextual reasoning with a fraction of the memory and processing power.
 
-## Background
+## Key Pillars
+1. Explainability (Transparent Reasoning): Every inference step is driven by clear, rule-based logic. You can trace exactly why the AI interpreted a sentence a certain way.
+2. Extreme Efficiency: Our engine performs inference via logic, not massive matrix multiplication. It is designed to run on low-cost hardware, from home appliances to embedded systems.
+3. Language Agnostic Structure: The logical core (Subject Inference, Semantic Categorization) is designed to be applicable across multiple languages, including Japanese and English.
 
-Most existing conversational AI systems rely heavily on morphological analysis and statistical methods.
-While effective for surface-level accuracy, these approaches often fail to capture
-sentence structure, causal relationships, and modifier dependencies, leading to misinterpretation.
+## The 5-Stage Logical Pipeline
+Our engine processes language through a bottom-up logical hierarchy:
+ Stage 1: Subject Inference (Resolving implicit subjects using psychological verb patterns)
+ Stage 2: Clarification Request (Deterministic handling of ambiguous inputs)
+ Stage 3: Context & Causality Inference (Mapping evidentiality markers to logical sources)
+ Stage 4: Modification Clarification (Resolving nested clause structures)
+ Stage 5: Argument Mapping (Precise assignment of case relationships)
 
-This limitation affects not only conversational AI, but also machine translation, IME, OCR, and speech systems.
+## Example: Logical Inference vs. Probabilistic Guessing
+Our engine avoids errors by using structural overrides instead of statistical weightings.
 
-⸻
 
-## Objective
-
-This project aims to propose and implement an approach that enables AI systems to
-understand sentences as structured meanings rather than isolated tokens,
-thereby reducing misinterpretation in human-AI interaction.
-
-⸻
 
 ## Approach
 
