@@ -3,6 +3,7 @@
 
 ## Core Philosophy
 Traditional AI relies on massive statistical models (LLMs) to predict the next word, often leading to "black box" decisions, high computational costs, and conversational misinterpretations. This project takes a different path: **Deterministic Logical Abstraction.**
+
 By codifying the structural and cognitive rules of language into a lightweight engine, we achieve human-level contextual reasoning with a fraction of the memory and processing power.
 
 ## Key Pillars
