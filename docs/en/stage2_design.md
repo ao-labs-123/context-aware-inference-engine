@@ -1,14 +1,19 @@
-# Stage 2: Clarification-Based Prevention of Misinterpretation
+# Stage 2:Reference Implementation
+
+## Overview
+This module implements Stage 2, which prevents premature interpretation when a sentence contains an omitted or ambiguous subject.
+
+Instead of inferring the most likely meaning, the system:
+
+	•	detects ambiguity,
+	•	defers interpretation,
+	•	and asks a minimal clarification question.
 
 Note:
 The clarification performed at this stage is not intended to advance semantic inference,
 but rather to prevent premature commitment to an incorrect interpretation.
 
 Detailed causal reasoning and syntactic analysis are handled in later stages.
-
-## Overview
-In this stage, when the subject of a sentence is omitted and cannot be uniquely identified from context,
-the AI refrains from making assumptions and instead asks clarifying questions.
 
 ## Problem
 Conventional dialogue AI systems often infer a subject with high probability even when contextual information is insufficient,
@@ -32,17 +37,6 @@ AI response:
 	•	Significant reduction of misinterpretation
 	•	More faithful understanding of user intent
 	•	Applicability to high-stakes domains such as healthcare, legal consultation, and fraud prevention
-
-# Reference Implementation (Python)
-
-## Overview
-This module implements Stage 2, which prevents premature interpretation when a sentence contains an omitted or ambiguous subject.
-
-Instead of inferring the most likely meaning, the system:
-
-	•	detects ambiguity,
-	•	defers interpretation,
-	•	and asks a minimal clarification question.
 
 
 ## Core Concepts
