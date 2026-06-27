@@ -5,9 +5,17 @@ Traditional AI relies on massive statistical models (LLMs) to predict the next w
 By codifying the structural and cognitive rules of language into a lightweight engine, we achieve human-level contextual reasoning with a fraction of the memory and processing power.
 
 ## Key Pillars
-1. Explainability (Transparent Reasoning): Every inference step is driven by clear, rule-based logic. You can trace exactly why the AI interpreted a sentence a certain way.
-2. Extreme Efficiency: Our engine performs inference via logic, not massive matrix multiplication. It is designed to run on low-cost hardware, from home appliances to embedded systems.
-3. Language Agnostic Structure: The logical core (Subject Inference, Semantic Categorization) is designed to be applicable across multiple languages, including Japanese and English.
+1. Explainability (Transparent Reasoning):
+
+   Every inference step is driven by clear, rule-based logic. You can trace exactly why the AI interpreted a sentence a certain way.
+   
+2. Extreme Efficiency:
+
+   Our engine performs inference via logic, not massive matrix multiplication. It is designed to run on low-cost hardware, from home appliances to embedded systems.
+
+3. Language Agnostic Structure:
+
+   The logical core (Subject Inference, Semantic Categorization) is designed to be applicable across multiple languages, including Japanese and English.
 
 ## The 5-Stage Logical Pipeline
 Our engine processes language through a bottom-up logical hierarchy:
