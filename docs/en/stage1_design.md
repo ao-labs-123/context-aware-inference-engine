@@ -1,9 +1,7 @@
 # Stage1 — Resolving First-Person Omitted Subjects in Dialogue AI
 
 ## Overview:
-This step focuses on improving the AI’s ability to correctly interpret sentences where the first-person subject (“I”) is omitted.
-In Japanese, psychological verbs such as 思った (thought), 感じた (felt), 気づいた (noticed) strongly imply the speaker as the subject.
-By codifying this linguistic pattern, the model can reduce misreadings and increase conversational accuracy.
+"This step focuses on optimizing the model's ability to interpret sentences with implicit subjects. By codifying linguistic patterns—such as the way psychological verbs (e.g., 'think', 'feel', 'notice') consistently map to the speaker as the primary agent—the model eliminates ambiguity in subject identification and significantly increases conversational accuracy, regardless of the underlying language."
 
 ## Key Points:
     1.	When a psychological verb appears without a subject,
