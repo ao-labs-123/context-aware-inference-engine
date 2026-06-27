@@ -21,5 +21,4 @@ This step focuses on optimizing the model's ability to interpret sentences with 
 | Input | Logic Process | Result |
 | --- | --- | --- |
 | "Thought was strange." | Psychological Verb + Null Subject → [Default: Speaker] | AI assigns "I" as the agent. |
-| "Thought it was strange apparently." | Psychological Verb + Null Subject + Evidential Marker → [Override: 3rd Party] | AI assigns "He/She/They" as the agent.
- |
+| "Thought it was strange apparently." | Psychological Verb + Null Subject + Evidential Marker → [Override: 3rd Party] | AI assigns "He/She/They" as the agent. |
