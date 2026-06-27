@@ -1,8 +1,12 @@
 #  Project Roadmap
+## Roadmap: Towards a Deterministic, Efficient AI Architecture
 
-This roadmap outlines the planned development stages for creating a **Misinterpretation-Free Conversational AI**, along with additional modules such as IME improvement, multilingual translation support, safety detection, and daily-use AI utilities.
+This roadmap outlines the systematic development of our Logic-based Linguistic Compression Engine. By transitioning from black-box statistical models to a deterministic rule-based architecture, we aim to provide a scalable, explainable, and ultra-efficient foundation for language processing.
 
-The project evolves in clear multi-stage phases to ensure transparency, reproducibility, and global contribution.
+## The Paradigm Shift
+Unlike traditional LLMs that rely on massive statistical correlations and probabilistic "guesses," our engine operates on structural logical abstraction. By encoding the fundamental cognitive rules of language into a modular, hierarchical pipeline, we achieve high-precision contextual understanding with minimal computational overhead.
+
+Our goal is to build an AI that doesn't just "predict" the next word, but understands the "logical bundle" behind the utterance.
 
 ---
 
