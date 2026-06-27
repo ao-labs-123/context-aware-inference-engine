@@ -21,11 +21,12 @@ By codifying the structural and cognitive rules of language into a lightweight e
 
 ## The 5-Stage Logical Pipeline
 Our engine processes language through a bottom-up logical hierarchy:
- Stage 1: Subject Inference (Resolving implicit subjects using psychological verb patterns)
- Stage 2: Clarification Request (Deterministic handling of ambiguous inputs)
- Stage 3: Context & Causality Inference (Mapping evidentiality markers to logical sources)
- Stage 4: Modification Clarification (Resolving nested clause structures)
- Stage 5: Argument Mapping (Precise assignment of case relationships)
+
+- Stage 1: Subject Inference (Resolving implicit subjects using psychological verb patterns)
+- Stage 2: Clarification Request (Deterministic handling of ambiguous inputs)
+- Stage 3: Context & Causality Inference (Mapping evidentiality markers to logical sources)
+- Stage 4: Modification Clarification (Resolving nested clause structures)
+- Stage 5: Argument Mapping (Precise assignment of case relationships)
 
 ## Example: Logical Inference vs. Probabilistic Guessing
 Our engine avoids errors by using structural overrides instead of statistical weightings.
