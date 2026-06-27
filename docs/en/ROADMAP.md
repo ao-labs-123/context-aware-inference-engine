@@ -6,8 +6,8 @@ The project evolves in clear multi-stage phases to ensure transparency, reproduc
 
 ---
 
-##  Phase 1 — Core Misinterpretation-Free Engine (Current Phase)
-**Goal:** Build the foundational logic that prevents misunderstanding in human–AI communication.
+##  Phase 1 — Logical Subject & Perspective Inference Engine. (Current Phase)
+**Goal:** 
 
 ### Tasks
 - Design rule-based + probabilistic interpretation filters  
