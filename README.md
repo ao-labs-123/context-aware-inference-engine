@@ -31,7 +31,12 @@ Our engine processes language through a bottom-up logical hierarchy:
 ## Example: Logical Inference vs. Probabilistic Guessing
 Our engine avoids errors by using structural overrides instead of statistical weightings.
 
+| Input | Logic Process | Result |
+|--|--|--|
+| "Thought it was strange." | Psychological Verb + Null Subject → [Default: Speaker] | AI correctly identifies "I". |
+| "Thought it was strange, apparently." | Psychological Verb + Evidential Marker → [Override: 3rd Party] | AI identifies the agent as a 3rd party. |
 
+In the second case, the "Evidential Marker" (⁠apparently⁠) acts as a logical trigger to override the default speaker-centric perspective. This deterministic logic ensures precision that probabilistic models often miss.
 
 ## Approach
 
