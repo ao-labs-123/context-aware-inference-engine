@@ -26,8 +26,12 @@ These almost always refer to the speaker in natural Japanese.
 
 2. 伝聞表現 → 三人称
 例：	
+```example
+		 •「〜らしい」
+　　　　　　•「〜と聞いた」
+　　　　　　•「〜そうだ」
 
-		 •「〜らしい」•「〜と聞いた」　•「〜そうだ」
+```
 
 These usually attach information to someone who is not the speaker.
 
