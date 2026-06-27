@@ -44,7 +44,6 @@ Instead of inferring the most likely meaning, the system:
 	•	defers interpretation,
 	•	and asks a minimal clarification question.
 
-⸻
 
 ## Core Concepts
 	•	No guessing: probabilistic inference is suppressed at this stage
@@ -61,7 +60,6 @@ Instead of inferring the most likely meaning, the system:
 	•	modifier attachment
 	•	semantic role inference
 
-⸻
 
 ## Extensibility
 
@@ -71,14 +69,12 @@ This stage can be extended to:
 	•	TTS read-aloud disambiguation
 	•	safety-critical conversational agents
 
-⸻
 
 ## Explicit Non-Goals
 	•	Maximizing recall via guessing
 	•	Statistical subject selection
 	•	Confidence-based inference
 
-⸻
 
 ## License Notice
 
