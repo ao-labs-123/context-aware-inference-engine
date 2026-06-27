@@ -9,12 +9,6 @@ Instead of inferring the most likely meaning, the system:
 	•	defers interpretation,
 	•	and asks a minimal clarification question.
 
-Note:
-The clarification performed at this stage is not intended to advance semantic inference,
-but rather to prevent premature commitment to an incorrect interpretation.
-
-Detailed causal reasoning and syntactic analysis are handled in later stages.
-
 ## Problem
 Conventional dialogue AI systems often infer a subject with high probability even when contextual information is insufficient,
 leading to frequent misinterpretations.
