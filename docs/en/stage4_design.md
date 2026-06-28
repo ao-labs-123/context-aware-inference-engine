@@ -1,38 +1,15 @@
-# Stage 4:Modifier Structure Resolution
+# Stage 4 — Clarification of Modification Structures
+## Overview:
+This step refines the contextual precision established in Stages 1 and 3. By isolating prepositional phrases, relative clauses, and adjectives, the model performs structural parsing to distinguish between "defining attributes" (essential identity) and "supplementary attributes" (additional information), ensuring modifiers are correctly tethered to their intended nouns or agents.
 
-## Overview
-Stage 4 focuses on resolving modifier structures, identifying
-which words or events modifiers (adjectives, adverbs, relative clauses) actually refer to.
+## Key Points:
+**1. Modifier Tethering**:
+The system systematically identifies the target (head noun) for every modifier. This prevents "long-distance dependency" errors where an adjective or clause might be incorrectly assigned to the wrong noun in a complex sentence.
 
-This stage reduces:
-	
-	•	Misattachment of modifiers
-	•	Structurally valid but semantically incorrect interpretations
-	•	Contextually unnatural readings
+**2. Defining vs. Supplementary Logic**:
+The model categorizes attributes:
+ Defining: Necessary to uniquely identify the subject (e.g., "The project that we started in May").
+ Supplementary: Providing non-essential context (e.g., "The project, which is quite difficult, ...").
 
-## Background
-Natural language often allows modifiers to attach to multiple possible targets.
-
-Example:
-
-“Take the book on the red box.”
-
-Here, red may modify:
-	
-	•	the box, or
-	•	the book
-
-Pure syntactic parsing often cannot decide which interpretation reflects the speaker’s intent.
-
-## Approach
-Stage 4 performs:
-	
-	•	Enumeration of possible modifier–target pairs
-	•	Semantic and contextual weighting
-	•	Integration of results from Stage 3 (causal reasoning)
-	•	Escalation to clarification (Stage 5) only when ambiguity remains critical
-
-## Benefits
-	•	Safer instruction interpretation in dialogue and voice systems
-	•	Reduced semantic drift in translation and OCR pipelines
-	•	More natural text generation and IME suggestions
+**3. Contextual Anchoring**:
+Modifiers are cross-referenced with the agent profiles established in Stage 1, ensuring that nested descriptions of third parties do not bleed into the speaker's own attributes.
