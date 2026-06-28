@@ -11,3 +11,15 @@ When the "by-agent" is omitted, the model analyzes the sentence context. If the 
 
 **3. Role Consistency**:
 By explicitly defining the receiver and actor, this step eliminates confusion in sentences where the speaker is the subject but not the primary cause of an action, preventing misattribution of responsibility.
+
+## Logic Comparison: Case Relation Parsing
+
+
+## Example of Case Relation Tracking:
+ **Input**: "The decision was made by the board, and I was informed later."
+ 
+ **Analysis**:
+ - Passive 1: "The decision (Receiver) was made by the board (Actor)."
+ - Passive 2: "I (Receiver) was informed (Action)."
+ 
+ **AI Understanding**: The AI maintains two distinct relationships: the board acting on the decision, and an unspecified actor informing the speaker. This prevents the speaker from being incorrectly identified as the one who made the decision.
