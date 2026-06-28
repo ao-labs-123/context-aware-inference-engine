@@ -1,75 +1,14 @@
-# Stage 2:Reference Implementation
+# Stage 2 — Clarification Requests for Undetermined Agents
 
-## Overview
-This module implements Stage 2, which prevents premature interpretation when a sentence contains an omitted or ambiguous subject.
+## Overview:
+This step functions as an intelligent fallback mechanism. When Stage 1's deterministic mapping fails to resolve a subject—or when multiple potential agents remain equally valid after contextual analysis—the model triggers a targeted, natural-language clarification request. This mirrors human conversational behavior by only intervening when ambiguity exceeds a manageable threshold.
 
-Instead of inferring the most likely meaning, the system:
+## Key Points:
+**1. Threshold-Based Trigger**:
+The system initiates a clarification request only when the confidence score for agent identification is low or when the syntax contains multiple, equally plausible subjects that cannot be resolved through linguistic patterns alone.
 
-	•	detects ambiguity,
-	•	defers interpretation,
-	•	and asks a minimal clarification question.
+**2. Minimalist Intervention**:
+To maintain natural flow, the inquiry is limited to the specific ambiguity. The model avoids exhaustive questioning, opting for contextual re-confirmation (e.g., "Are you referring to yourself or [mentioned party]?").
 
-## Problem
-Conventional dialogue AI systems often infer a subject with high probability even when contextual information is insufficient,
-leading to frequent misinterpretations.
-
-## Approach
-	•	Defer interpretation when contextual certainty is low
-	•	Generate clarification questions when multiple subject candidates exist
-	•	Prioritize confirmation over probabilistic inference
-
-## Example
-User input:
-
-“Yesterday was really tough.”
-
-AI response:
-
-“Are you referring to something that happened to you personally?”
-
-## Expected Benefits
-	•	Significant reduction of misinterpretation
-	•	More faithful understanding of user intent
-	•	Applicability to high-stakes domains such as healthcare, legal consultation, and fraud prevention
-
-
-## Core Concepts
-	•	No guessing: probabilistic inference is suppressed at this stage
-	•	Ambiguity-aware: multiple subject candidates are preserved
-	•	Confirmation-first: user clarification is required before advancing
-
-## Design Notes
-	•	This implementation does not resolve meaning
-	•	It does not perform causal or syntactic analysis
-	•	It only determines whether interpretation is safe to proceed
-
-## Later stages are responsible for:
-	•	causal reasoning
-	•	modifier attachment
-	•	semantic role inference
-
-
-## Extensibility
-
-This stage can be extended to:
-	
-	•	speech-to-text systems
-	•	TTS read-aloud disambiguation
-	•	safety-critical conversational agents
-
-
-## Explicit Non-Goals
-	•	Maximizing recall via guessing
-	•	Statistical subject selection
-	•	Confidence-based inference
-
-
-## License Notice
-
-This reference implementation is designed for:
-	
-	•	research
-	•	education
-	•	safety-oriented system design
-
-Commercial usage should consider downstream responsibility handling.
+**3. Human-Centric Reliability**:
+By acknowledging that some sentences are genuinely ambiguous even to human listeners, this step prevents the AI from making inaccurate assumptions, thereby ensuring data integrity and user trust.
