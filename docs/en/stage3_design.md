@@ -1,72 +1,13 @@
-# Stage 3: Contextual and Causal Inference
+# Stage 3 — Causal Direction Analysis
+## Overview:
+This step builds upon the identified agents from Stage 1 to map the logical flow of the conversation. By analyzing conjunctions, conjunctive adverbs, and causal prepositions (e.g., 'because', 'due to', 'therefore', 'however'), the model determines the direction of causality between events, preventing the misinterpretation of premise and conclusion.
 
-## Overview
-At this stage, the AI performs causal and contextual inference only after ambiguity in subject and reference has been resolved in earlier stages.
-The goal is to infer why an event occurred and how multiple pieces of information are related, without prematurely committing to incorrect causal interpretations.
+## Key Points:
+**1. Logical Marker Mapping**:
+The system identifies specific linguistic "connectors" to categorize the sentence structure into cause-and-effect pairs, logical reversals, or sequential events.
 
-## Problem
-Conventional dialogue AI systems often infer causality based on surface-level probability, even when contextual grounding is insufficient.
-This can lead to incorrect assumptions about responsibility, intention, or emotional state.
+**2. Directional Dependency**:
+By anchoring the cause and the result to the agents identified in previous stages, the model maps the "who" and "why" behind an action, ensuring that causality remains attached to the correct entity.
 
-## Approach
-	•	Perform causal inference only after subject and reference clarity is ensured
-	•	Distinguish between causes, results, conditions, and coincidental correlations
-	•	Infer temporal and logical relationships between events
-	•	Avoid over-attribution of intent or responsibility when evidence is weak
-
-## Example
-User input:
-
-“I was late because the train stopped.”
-
-AI interpretation:
-	
-	•	Event A: Train stopped
-	•	Event B: User was late
-	•	Inferred causal relationship: A → B
-	•	No assumption beyond what is explicitly supported by context
-
-## Expected Benefits
-	•	More accurate understanding of user intent and experience
-	•	Reduced risk of incorrect causal attribution
-	•	High applicability to healthcare, legal consultation, and safety-critical domains
-
-## Implementation points
-	•	Minimal reference implementation for causal inference
-	•	Does not rely on deep learning
-	•	Confidence-based output prevents premature conclusions
-	•	Designed to integrate with later stages safely
-
-## Mermaid Diagram
-
-flowchart TD
-    A[User Input Text] --> B[Event Extraction]
-
-    B --> C[Event List]
-    C --> D[Temporal Ordering]
-
-    D --> E[Causal Candidate Generation]
-    E --> F[Causality Evaluation]
-
-    F --> G{Confidence >= Threshold?}
-
-    G -->|Yes| H[Confirmed Causal Relation]
-    G -->|No| I[Unconfirmed / Hypothesis]
-
-    H --> J[Causal Relation Output]
-    I --> J
-
-    J --> K[Next Stage Integration<br/>(Stage4 / Stage5)]
-
-## Meaning of diagram	
-	•	Extracts events from input text
-	•	Generates causal candidates based on temporal order
-	•	Evaluates causality using confidence scoring
-	•	Separates confirmed relations from hypotheses
-	•	Designed for seamless integration with later stages
-
-👉 Core logic for misreading-resistant dialogue AI
-
-
-
-
+**3. Structural disambiguation**:
+This step resolves complex sentences where multiple events are linked, preventing the AI from conflating an outcome with an underlying motivation.
