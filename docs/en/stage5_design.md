@@ -1,48 +1,13 @@
-# Stage 5: Explicit Modeling of Noun Case Relations
+# Stage 5 — Parsing Case Relationships
+## Overview:
+This final structural layer standardizes the relationship between nouns and verbs. Building upon the agent identification (Stage 1), causal mapping (Stage 3), and modification parsing (Stage 4), this step specifically resolves passive voice constructions. It ensures the AI correctly maps the "receiver" and the "actor" even in complex or elliptical passive forms.
 
-## Overview
-Stage 5 focuses on explicitly modeling case relations between nouns, such as
-who does what to whom, in what role, and under what relationship.
+## Key Points:
+**1. Passive Voice Mapping**:
+The system identifies the structure ⁠[Subject] + [be/get] + [V-en] + [by-agent]⁠. It assigns the grammatical subject as the "receiver" and the noun following "by" as the "actor," effectively reversing the active voice mapping established in Stage 1.
 
-Instead of relying solely on particles or word order, the system interprets sentences based on semantic roles, enabling more reliable understanding.
+**2. Elliptical Passive Resolution (Agentless Passive)**:
+When the "by-agent" is omitted, the model analyzes the sentence context. If the action is logically consistent, it defaults the grammatical subject as the receiver.
 
-## Problem
-Conventional dialogue systems often struggle with:
-
-	•	Omitted particles or ambiguous expressions
-	•	Sentences containing multiple nouns
-	•	Grammatically correct but semantically incorrect interpretations
-
-Example:
-
-“I gave the student’s report to the teacher.”
-
-→ Ambiguity remains regarding who gave the report and whose report it is, depending on context.
-
-## Proposed Improvement
-Rather than treating a sentence as a sequence of words, each noun is assigned a semantic role, such as:
-
-    •	Agent (actor)
- 	•	Patient / Object
-	•	Recipient
-	•	Possessor
-	•	Location / Time
-
-This allows the system to preserve structured relationships between entities, leading to consistent interpretation.
-
-## Position of Stage 5
-
-After completing:
-
-	•	Stage 1: Misreading detection
-	•	Stage 2: Minimal clarification
-	•	Stage 3: Causal reasoning
-	•	Stage 4: Modifier structure resolution
-
-Stage 5 serves as the final step that determines the sentence’s semantic structure.
-
-## Benefits
-	•	Robust understanding of long and complex sentences
-	•	Applicable to dialogue AI, speech AI, translation, and IME systems
-	•	Prevents interpretations that are grammatically valid but semantically incorrect
-
+**3. Role Consistency**:
+By explicitly defining the receiver and actor, this step eliminates confusion in sentences where the speaker is the subject but not the primary cause of an action, preventing misattribution of responsibility.
