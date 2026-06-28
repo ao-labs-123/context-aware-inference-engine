@@ -20,8 +20,13 @@ This step resolves complex sentences where multiple events are linked, preventin
 
 ## Example of Causal Tracking:
  **Input**: "I couldn't finish the report because the system was down."
+ 
  **Analysis**:
+ 
  **Agent**: "I" (Speaker).
+ 
  **Causal Marker**: "Because" (indicates the reason follows).
+ 
  **Event Chain**: System down (Condition) → Result in failure to finish report (Outcome).
+ 
  **AI Understanding**: The system failure is the primary cause; the speaker is the affected agent.
