@@ -11,8 +11,10 @@ The system systematically identifies the target (head noun) for every modifier. 
 
 The model categorizes attributes:
 - Defining:
+
   Necessary to uniquely identify the subject (e.g., "The project that we started in May").
 - Supplementary:
+
   Providing non-essential context (e.g., "The project, which is quite difficult, ...").
 
 **3. Contextual Anchoring**:
