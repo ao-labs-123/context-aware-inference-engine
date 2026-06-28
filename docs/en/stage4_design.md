@@ -21,6 +21,7 @@ Modifiers are cross-referenced with the agent profiles established in Stage 1, e
 
 ## Example of Structural Clarification:
  **Input**: "I talked to the manager who was frustrated with the deadline."
+ 
  **Analysis**:
  - Target: "Manager" (Third Party).
  - Modifier: "who was frustrated with the deadline" (Relative clause).
