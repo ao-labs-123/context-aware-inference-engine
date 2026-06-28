@@ -4,12 +4,15 @@ This step refines the contextual precision established in Stages 1 and 3. By iso
 
 ## Key Points:
 **1. Modifier Tethering**:
+
 The system systematically identifies the target (head noun) for every modifier. This prevents "long-distance dependency" errors where an adjective or clause might be incorrectly assigned to the wrong noun in a complex sentence.
 
 **2. Defining vs. Supplementary Logic**:
+
 The model categorizes attributes:
  Defining: Necessary to uniquely identify the subject (e.g., "The project that we started in May").
  Supplementary: Providing non-essential context (e.g., "The project, which is quite difficult, ...").
 
 **3. Contextual Anchoring**:
+
 Modifiers are cross-referenced with the agent profiles established in Stage 1, ensuring that nested descriptions of third parties do not bleed into the speaker's own attributes.
