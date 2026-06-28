@@ -26,4 +26,5 @@ Modifiers are cross-referenced with the agent profiles established in Stage 1, e
  - Target: "Manager" (Third Party).
  - Modifier: "who was frustrated with the deadline" (Relative clause).
  - Attachment: The frustration is tied exclusively to the "Manager," not the speaker.
+
  **AI Understanding**: Accurately attributes the emotional state (frustration) to the secondary agent, maintaining the structural boundary between the speaker and the manager.
