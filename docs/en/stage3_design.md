@@ -4,12 +4,15 @@ This step builds upon the identified agents from Stage 1 to map the logical flow
 
 ## Key Points:
 **1. Logical Marker Mapping**:
+
 The system identifies specific linguistic "connectors" to categorize the sentence structure into cause-and-effect pairs, logical reversals, or sequential events.
 
 **2. Directional Dependency**:
+
 By anchoring the cause and the result to the agents identified in previous stages, the model maps the "who" and "why" behind an action, ensuring that causality remains attached to the correct entity.
 
 **3. Structural disambiguation**:
+
 This step resolves complex sentences where multiple events are linked, preventing the AI from conflating an outcome with an underlying motivation.
 
 ## Logic Comparison: Causal Parsing
