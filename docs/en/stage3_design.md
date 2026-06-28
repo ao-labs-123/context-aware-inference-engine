@@ -23,10 +23,10 @@ This step resolves complex sentences where multiple events are linked, preventin
  
  **Analysis**:
  
- **Agent**: "I" (Speaker).
+ - Agent: "I" (Speaker).
  
- **Causal Marker**: "Because" (indicates the reason follows).
+ - Causal Marker: "Because" (indicates the reason follows).
  
- **Event Chain**: System down (Condition) → Result in failure to finish report (Outcome).
+ - Event Chain: System down (Condition) → Result in failure to finish report (Outcome).
  
  **AI Understanding**: The system failure is the primary cause; the speaker is the affected agent.
