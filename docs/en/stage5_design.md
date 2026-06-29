@@ -22,9 +22,9 @@ For irregular cases (e.g., "stand" as a posture vs. "stand" as a situation), the
 
 | Input | Logic Process | Result |
 |--|--|--|
-| "The report was finished by him." | [Receiver: Report] + [Actor: Him] | AI maps: "Him" (Actor) performed action on "Report" (Receiver). |
-| "The report was finished." | [Subject: Report] + [Passive/No Actor] | AI recognizes "Report" as the receiver (Agent is unknown/omitted). |
-| "I got promoted." | [Receiver: I] + [Passive/No Actor] | AI maps "I" as the receiver of the action "promote". |
+| "I have a car." | [Morphology: Base] → [Category: Stative] | Possession status.|
+| "I am having a party." | [Morphology: be + V-ing] → [Category: Action] | Active event participation. |
+| "I was told by him." | [Passive: be + V-en + by] | Actor: Him / Receiver: I. |
 
 ## Example of Case Relation Tracking:
  **Input**: "The decision was made by the board, and I was informed later."
