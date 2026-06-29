@@ -1,5 +1,5 @@
 SUBJECT_RULES= {
-  "psycology verbs": [
+  "Psychological Verb": [
 
   ]
 }
