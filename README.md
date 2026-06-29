@@ -38,19 +38,6 @@ Our engine avoids errors by using structural overrides instead of statistical we
 
 In the second case, the "Evidential Marker" (⁠apparently⁠) acts as a logical trigger to override the default speaker-centric perspective. This deterministic logic ensures precision that probabilistic models often miss.
 
-## Approach
-
-The system adopts a staged improvement model, including:
-	
-	•	Clarification of contextual assumptions
-	•	Minimal and strategic clarification questions
-	•	Causal relationship inference
-	•	Structural and grammatical dependency analysis
-	•	Final intent determination
-
-This approach complements traditional NLP techniques while improving
-semantic and grammatical understanding.
-
 
 ## Repository Structure
 
