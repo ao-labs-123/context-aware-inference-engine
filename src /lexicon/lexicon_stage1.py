@@ -8,5 +8,10 @@ SUBJECT_RULES = {
   ],
 
   "Attribution Override": [
+    "seemingly",
+    "allegedly",
+    "they say",
+    "I heard", 
+    "it is told"
   ]
 }
