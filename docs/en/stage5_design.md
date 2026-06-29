@@ -4,9 +4,11 @@ This final structural layer standardizes the relationship between nouns, verbs, 
 
 ## Key Points:
 **1. Passive Voice Mapping**:
+
 The system identifies the structure ⁠[Subject] + [be/get] + [V-en] + [by-agent]⁠. It assigns the grammatical subject as the "receiver" and the noun following "by" as the "actor." If the "by-agent" is omitted, it assumes the grammatical subject as the receiver if logically consistent.
 
 **2. Aspectual Distinction (Static vs. Dynamic)**:
+
 The model evaluates the presence of the ⁠-ing⁠ suffix to determine the verb's nature:
 - Dynamic Verbs (with -ing): Interpreted as active processes or ongoing actions.
 - Stative Verbs (without -ing): Interpreted as persistent states or conditions.
