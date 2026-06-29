@@ -22,7 +22,6 @@ By codifying the structural and cognitive rules of language into a lightweight e
 ## The 5-Stage Logical Pipeline
 Our engine processes language through a bottom-up logical hierarchy:
 
-## Stages
 - [stage1:Subject Inference](docs/en/stage1_design.md)
   (Resolving implicit subjects using psychological verb patterns)
 - [stage2:Clarification Request](docs/en/stage2_design.md)
