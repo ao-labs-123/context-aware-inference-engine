@@ -29,14 +29,6 @@
 
 各Stageは精度向上を目的とするだけでなく、AIの解釈過程を人間が追跡できるよう設計されています。
 
-## Evidence / Demonstration
-
-本リポジトリでは、文脈推定システムの段階的な理解能力の変化を、
-例文および実証用デモを通して示す。
-
-- [例文ベースの実証](https://github.com/ao-labs-123/subject-inference-demo)
-- [インタラクティブデモ（Streamlit）](https://share.streamlit.io/)
-
 ## Comparison with Conventional AI
 | 観点 | 統計的言語モデル（主に次トークン予測） | 文脈推定システム |
 |---|---|---|
