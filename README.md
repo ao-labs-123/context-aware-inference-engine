@@ -28,6 +28,7 @@ Our engine processes language through a bottom-up logical hierarchy:
 - Stage 4: Modification Clarification (Resolving nested clause structures)
 - Stage 5: Argument Mapping (Precise assignment of case relationships)
 
+## Stages
 - [stage1:Subject Inference](docs/en/stage1_design.md)
 - [stage2:Clarification Request](docs/en/stage2_design.md)
 - [stage3:Context & Causality Inference](docs/en/stage3_design.md)
