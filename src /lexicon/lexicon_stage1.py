@@ -1,4 +1,5 @@
-SUBJECT_RULES= {
+SUBJECT_RULES = {
+  
   "Psychological Verb": [
     "think",
     "feel",
