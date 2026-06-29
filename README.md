@@ -27,8 +27,6 @@ Our engine processes language through a bottom-up logical hierarchy:
 - [stage3:Context & Causality Inference](docs/en/stage3_design.md)
 - [stage4:Modification Clarification](docs/en/stage4_design.md)
 - [stage5:Argument Mapping](docs/en/stage5_design.md)
-  
-  (Precise assignment of case relationships)
 
 ## Example: Logical Inference vs. Probabilistic Guessing
 Our engine avoids errors by using structural overrides instead of statistical weightings.
