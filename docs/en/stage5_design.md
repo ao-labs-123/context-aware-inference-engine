@@ -26,11 +26,12 @@ For irregular cases (e.g., "stand" as a posture vs. "stand" as a situation), the
 | "I am having a party." | [Morphology: be + V-ing] → [Category: Action] | Active event participation. |
 | "I was told by him." | [Passive: be + V-en + by] | Actor: Him / Receiver: I. |
 
-## Example of Case Relation Tracking:
- **Input**: "The decision was made by the board, and I was informed later."
+## Example of Structural & State Tracking:
+**Input**: "I was standing there when I understood what was happening."
+
+**Analysis**:
+- "Was standing": Lexicon check classifies as posture (Stative/Duration).
+- "Understood": Base form classification (Stative/State).
+- "Was happening": Progressive form classification (Action/Dynamic).
  
- **Analysis**:
- - Passive 1: "The decision (Receiver) was made by the board (Actor)."
- - Passive 2: "I (Receiver) was informed (Action)."
- 
- **AI Understanding**: The AI maintains two distinct relationships: the board acting on the decision, and an unspecified actor informing the speaker. This prevents the speaker from being incorrectly identified as the one who made the decision.
+ **AI Understanding**: The AI captures a continuous state of being (standing), a static cognitive state (understanding), and an active event (happening) simultaneously, without conflating their logical roles.
