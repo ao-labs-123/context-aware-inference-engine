@@ -1,22 +1,24 @@
 # rules/stage1_rule.py
+
 import json
 
-    def determine_subject(text, lexicon_data):
-    # 1. 伝聞マーカーが含まれているか判定
-    is_reported = any(marker in text for marker in lexicon_data["Attribution Override"])
+def get_lexicon():
+    with open('src/lexicon/psychological_verbs.json', 'r') as f:
+        verbs = json.load(f)
+    with open('src/lexicon/attribution_markers.json', 'r') as f:
+        markers = json.load(f)
+    return {**verbs, **markers}
+
+def determine_subject(text):
+    lexicon = get_lexicon()
     
-    # 2. 心理動詞が含まれているか判定
-    is_psychological = any(verb in text for verb in lexicon_data["Psychological Verbs"])
+    # 伝聞マーカーの判定
+    is_reported = any(m in text for m in lexicon["Attribution Override"])
+    # 心理動詞の判定
+    is_psychological = any(v in text for v in lexicon["Psychological Verbs"])
     
-    # 3. 圏論的ルール（判定ロジック）
     if is_reported:
-        # 伝聞があれば、心理動詞の有無にかかわらず「三人称」
         return "Third-Person"
     elif is_psychological:
-        # 伝聞がなく、心理動詞だけなら「一人称」
         return "First-Person"
-    else:
-        # それ以外はデフォルト（あるいは文脈依存）
-        return "Neutral"
-
-    pass
+    return "Neutral"
