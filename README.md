@@ -51,7 +51,6 @@ The system adopts a staged improvement model, including:
 This approach complements traditional NLP techniques while improving
 semantic and grammatical understanding.
 
-⸻
 
 ## Repository Structure
 
