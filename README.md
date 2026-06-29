@@ -28,14 +28,14 @@ Our engine processes language through a bottom-up logical hierarchy:
 - [stage2:Clarification Request](docs/en/stage2_design.md)
   
   (Deterministic handling of ambiguous inputs)
-  
 - [stage3:Context & Causality Inference](docs/en/stage3_design.md)
+  
   (Mapping evidentiality markers to logical sources)
-  
 - [stage4:Modification Clarification](docs/en/stage4_design.md)
-  (Resolving nested clause structures)
   
+  (Resolving nested clause structures)
 - [stage5:Argument Mapping](docs/en/stage5_design.md)
+  
   (Precise assignment of case relationships)
 
 ## Example: Logical Inference vs. Probabilistic Guessing
