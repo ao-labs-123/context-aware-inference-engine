@@ -10,6 +10,7 @@ The system identifies the structure ⁠[Subject] + [be/get] + [V-en] + [by-agent
 The model evaluates the presence of the ⁠-ing⁠ suffix to determine the verb's nature:
 - Dynamic Verbs (with -ing): Interpreted as active processes or ongoing actions.
 - Stative Verbs (without -ing): Interpreted as persistent states or conditions.
+  
 This distinction prevents the model from incorrectly assigning "agentive force" to static descriptions.
 
 
