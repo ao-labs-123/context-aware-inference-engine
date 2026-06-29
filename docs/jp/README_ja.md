@@ -7,20 +7,35 @@
 既存の確率的モデルが抱える「計算コストの肥大化」と「文脈の崩壊」を、言語の構造的な抽象化（ルールベース）によって解決する。
 統計に依存せず、人間が思考する際の「論理の束」をルールとしてコード化することで、最小限のメモリと演算能力で、曖昧さを排除した確実な推論を実現する。
 
-
 ## Approach（アプローチ）
 
 本研究では、以下の段階的改善モデルを採用します。
 
-	•	文脈の前提条件の明示
-	•	必要最小限の聞き返し設計
+	•	主語推定
+	•	必要最小限の聞き返し
 	•	因果関係の推定
-	•	修飾構造・格関係の明確化
-	•	意図確定後の最終判断
+	•	修飾構造
+	•   格関係の明確化
 
 これにより、従来の形態素解析を前提としつつ、
 文法・意味レベルでの理解精度向上を目指します。
 
+## Stages
+- [Stage 1: 基本的な文脈推定](docs/jp/stage1_design.md)
+- [Stage 2: 最小限の聞き返し](docs/jp/stage2_design.md)
+- [Stage 3: 因果関係推定](docs/jp/stage3_design.md)
+- [Stage 4: 修飾構造の理解](docs/jp/stage4_design.md)
+- [Stage 5: 名詞間の格関係推定](docs/jp/stage5_design.md)
+
+各Stageは精度向上を目的とするだけでなく、AIの解釈過程を人間が追跡できるよう設計されています。
+
+## Evidence / Demonstration
+
+本リポジトリでは、文脈推定システムの段階的な理解能力の変化を、
+例文および実証用デモを通して示す。
+
+- [例文ベースの実証](https://github.com/ao-labs-123/subject-inference-demo)
+- [インタラクティブデモ（Streamlit）](https://share.streamlit.io/)
 
 ## Comparison with Conventional AI
 | 観点 | 統計的言語モデル（主に次トークン予測） | 文脈推定システム |
@@ -39,49 +54,4 @@
 | 想定用途 | 汎用対話・文章生成 | 解釈重視の対話・補助的AI基盤 |
 
 ※ 本比較は「対話における文脈保持と解釈」を主眼としたものであり、生成品質や知識量の優劣を示すものではない。
-
-## Scope（適用範囲)
-	本手法は以下の分野への応用を想定している。
-	•	対話AI / 音声アシスタント
-	•	機械翻訳・IME・OCR
-	•	詐欺・誤情報検知（聞き返しを含む補助判断）
-	•	SNS・カスタマーサポートにおける文意理解
-
-## Limitations（制限・注意点）
-	•	法的判断や最終的な意思決定を代替するものではない
-	•	詩的・高度に抽象的な表現は対象外となる場合がある
-	•	本手法は既存AIの補助的基盤としての利用を想定している
-
-⸻
-
-## Example Use Cases（適用例）
-	•	対話AIの聞き返し精度向上
-	•	詐欺・迷惑メッセージの未然防止
-	•	多言語翻訳時の意味ずれ低減
-	•	IME・音声入力の文脈補正
-
-👉 詳細な設計・各段階の説明は docs/jp/ を参照してください。
-
-本研究は、大規模言語モデルのような統計的生成AIに依存せず、会話や出来事の「文脈」を論理的に圧縮・推定する軽量な基盤AIの可能性を示すものである。
-
-## Documentation
-- [Background・Objective・Approach](docs/jp/README.ja.md)
-
-## Stages
-- [Stage 1: 基本的な文脈推定](docs/jp/stage1_design.md)
-- [Stage 2: 最小限の聞き返し](docs/jp/stage2_design.md)
-- [Stage 3: 因果関係推定](docs/jp/stage3_design.md)
-- [Stage 4: 修飾構造の理解](docs/jp/stage4_design.md)
-- [Stage 5: 名詞間の格関係推定](docs/jp/stage5_design.md)
-
-## Evidence / Demonstration
-
-本リポジトリでは、文脈推定システムの段階的な理解能力の変化を、
-例文および実証用デモを通して示す。
-
-- [例文ベースの実証](https://github.com/ao-labs-123/subject-inference-demo)
-- [インタラクティブデモ（Streamlit）](https://share.streamlit.io/)
-
-各Stageは精度向上を目的とするだけでなく、AIの解釈過程を人間が追跡できるよう設計されています。
-
 
