@@ -1,1 +1,17 @@
+SUBJECT_RULES = {
+  
+  "Psychological Verbs": [
+    "think",
+    "feel",
+    "want",
+    "hope"
+  ],
 
+  "Attribution Override": [
+    "seemingly",
+    "allegedly",
+    "they say",
+    "I heard", 
+    "it is told"
+  ]
+}
