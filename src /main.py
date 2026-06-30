@@ -1,4 +1,6 @@
+from analyzer import LogicAnalyzer
 import json
+
 from rules.stage1_rule import determine_subject
 
 # 例文ファイルを読み込む
@@ -11,6 +13,6 @@ def run_test(input_file):
         print(f"Input: {text}")
         print(f"Result: {result}")
         print("-" * 30)
-
-if __name__ == "__main__":
-    run_test('data/examples/stage1_input.json')
+        
+    if __name__ == "__main__":
+        run_test('/workspaces/context-aware-inference-engine/data/examples/stage1_input.json')

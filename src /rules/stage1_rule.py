@@ -3,9 +3,9 @@
 import json
 
 def get_lexicon():
-    with open('src/lexicon/psychological_verbs.json', 'r') as f:
+    with open('lexicon/psychological_verbs.json', 'r') as f:
         verbs = json.load(f)
-    with open('src/lexicon/attribution_markers.json', 'r') as f:
+    with open('lexicon/attribution_markers.json', 'r') as f:
         markers = json.load(f)
     return {**verbs, **markers}
 
