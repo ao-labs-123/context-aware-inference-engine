@@ -1,26 +1,26 @@
-#analyzer.py
+# analyzer.py
 
 class LogicAnalyzer:
     def __init__(self, lexicon_data):
         self.lexicon = lexicon_data
-        
-    def stage1_analyze(text, lexicon):
-        is_reported = any(m in text for m in lexicon["Attribution Override"])
-        is_psychological = any(v in text for v in lexicon["Psychological Verbs"])
-        
-        if is_reported:
+
+    def stage1_analyze(self, text, subject_result):
+        # stage1_rule.py で判定した結果（"Third-Person" など）を subject_result で受け取ります
+        if subject_result == "Third-Person":
             return {
-            "process": "Psychological Verb + Null Subject + Evidential Marker",
-            "decision": "Override: 3rd Party",
-            "agent": "He/She/They"
+                "process": "Psychological Verb + Null Subject + Evidential Marker",
+                "decision": "Override: 3rd Party",
+                "agent": "He/She/They"
             }
-        
-        elif is_psychological:
+        elif subject_result == "First-Person":
             return {
-            "process": "Psychological Verb + Null Subject",
-            "decision": "Default: Speaker",
-            "agent": "I"
+                "process": "Psychological Verb + Null Subject",
+                "decision": "Default: Speaker",
+                "agent": "I"
             }
+        else:
             return {
-            "process": "Standard", "decision": "None", "agent": "Unknown"
+                "process": "Standard",
+                "decision": "None",
+                "agent": "Unknown"
             }
