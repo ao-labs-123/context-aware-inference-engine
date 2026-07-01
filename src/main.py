@@ -13,18 +13,18 @@ def run_test(input_file):
     lexicon_data = get_lexicon()
     analyzer = LogicAnalyzer(lexicon_data)
 
-    # 3. 1件ずつ判定して画面に表示する
+    # main.py のループ内
     for text in examples:
-        # あなたが作った判定ロジックを動かす
-        subject_result = determine_subject(text)
+        # 1. まず判定する
+        subject_status = determine_subject(text) 
         
-        # analyzer.py に結果を渡して、最終的なプロセスとエージェントを取得
-        final_result = analyzer.stage1_analyze(text, subject_result)
+        # 2. その結果を使って、analyzerでログを作る
+        log = analyzer.stage1_analyze(text, subject_status)
         
         print(f"Input: {text}")
-        print(f"Result: {final_result['agent']} ({final_result['decision']})")
-        print("-" * 30)
+        print(f"Result: {log}") # ここで辞書形式のログが出るはずです
 
+        
 if __name__ == "__main__":
     # 正しいデータファイルの場所を指定して実行
     run_test('/workspaces/context-aware-inference-engine/data/examples/stage1_input.json')
