@@ -16,9 +16,3 @@
 **3. 人間中心の信頼性**：
 
 人間にとっても判断が難しい文は存在するという前提に立ちます。誤った推測を避けることで、AIの推論精度を保ち、ユーザーからの信頼を確保します。
-
-| Input | Logic Process | Result |
-| :--- | :--- | :--- |
-| "Thought was strange." | Psychological Verb + Null Subject $\rightarrow$ [Default: Speaker] | AI assigns "I" as the agent. |
-| "Thought it was strange apparently." | Psychological Verb + Null Subject + Evidential Marker $\rightarrow$ [Override: 3rd Party] | AI assigns "He/She/They" as the agent. |
-| "Succeeded because you helped." | Null Subject + No Psychological Verb + No Evidential Marker $\rightarrow$ [Fallback: Ambiguous] | AI triggers Stage 2 clarification (Undetermined agent). |
