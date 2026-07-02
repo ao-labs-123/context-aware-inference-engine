@@ -25,4 +25,4 @@ def determine_subject(text):
         return "Third-Person"
     elif is_psychological:
         return "First-Person"
-    return "Neutral"
+        return "Neutral"
