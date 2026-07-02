@@ -6,7 +6,10 @@ This step functions as an intelligent fallback mechanism. When Stage 1's determi
 ## Key Points:
 **1. Threshold-Based Trigger**:
 
-The system initiates a clarification request only when the confidence score for agent identification is low or when the syntax contains multiple, equally plausible subjects that cannot be resolved through linguistic patterns alone. **Additionally, a clarification is automatically triggered if the input completely lacks an explicit subject, psychological verbs, and evidential markers, making it structurally impossible to infer the agent without context.**
+**1. Threshold-Based Trigger:**
+
+The system initiates a clarification request only when the confidence score for agent identification is low or when the syntax contains multiple, equally plausible subjects that cannot be resolved through linguistic patterns alone.
+* **Missing Core Markers:** A clarification request is strictly required when a sentence features **no explicit subject, no psychological verbs, and no evidential markers** (e.g., plain/ambiguous factual statements).
 
 **2. Minimalist Intervention**:
 
