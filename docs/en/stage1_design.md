@@ -5,15 +5,15 @@ This step focuses on optimizing the model's ability to interpret sentences with 
 
 ## Key Points:
 
-1. Explicit Subject Priority:
+**1. Explicit Subject Priority**:
 
    When an explicit subject is present in the sentence (e.g., "I," "He," "The company"), the model bypasses inference heuristics and directly assigns the specified agent. This acts as the highest-priority deterministic rule.
 
-2. Psychological Verb Default for Omitted Subjects:
+**2. Psychological Verb Default for Omitted Subjects**:
 
    When a psychological verb (e.g., 'think', 'feel', 'want', 'hope', 'stressed') appears without an explicit subject, assign the speaker as the agent by default.
 
-3. Evidentiality & Attribution Override:
+**3. Evidentiality & Attribution Override**:
 
    If a sentence contains markers of evidentialities or indirect speech (e.g., 'seemingly', 'allegedly', 'they say', 'I heard', 'it is told'), treat the agent as a second or third party, overriding the speaker-default.
 
