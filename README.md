@@ -56,10 +56,10 @@ In the second case, the "Evidential Marker" (⁠apparently⁠) acts as a logical
 │    └── log.json
 │
 ├── src
-│   ├── lexicon
-│   ├── rules
-│   ├── analyzer.py
-│   └── main.py
+│    ├── lexicon
+│    ├── rules
+│    ├── analyzer.py
+│    └── main.py
 │  
 ├── README.md
 └── LICENSE
