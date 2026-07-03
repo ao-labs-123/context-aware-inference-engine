@@ -50,14 +50,17 @@ In the second case, the "Evidential Marker" (⁠apparently⁠) acts as a logical
 │    ├── stage3_design.md
 │    ├── stage4_design.md
 │    └── stage5_design.md  
-│  
-├── src
-│   ├── step1_demo.py
-│   ├── step2_demo.py   
-│   ├── step3_demo.py 
-│   ├── step4_demo.py
-│   └── step5_demo.py
 │
+├── data
+│    ├── examples
+│    └── log.json
+│
+├── src
+│   ├── lexicon
+│   ├── rules
+│   ├── analyzer.py
+│   └── main.py
+│  
 ├── README.md
 └── LICENSE
 
