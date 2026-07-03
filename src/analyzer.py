@@ -4,6 +4,17 @@ class LogicAnalyzer:
     def __init__(self, lexicon_data):
         self.lexicon = lexicon_data
 
+    explicit_agent = determine_explicit_subject(text)
+
+        if explicit_agent:
+           # 主語が明示されているなら、即座に確定ルートへ
+           return {
+            'process': 'Explicit Subject Present',
+            'decision': 'Priority: Explicit Subject',
+            'agent': explicit_agent
+            }
+
+
     def stage1_analyze(self, text, subject_result):
         # stage1_rule.py で判定した結果（"Third-Person" など）を subject_result で受け取ります
         if subject_result == "Third-Person":
