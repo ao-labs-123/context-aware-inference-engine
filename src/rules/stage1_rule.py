@@ -11,6 +11,25 @@ def get_lexicon():
     print(f"DEBUG: Combined Lexicon Keys: {combined.keys()}")
     return combined
 
+def determine_explicit_subject(text):
+    explicit_subjects = ["I", "He", "She", "They", "We", "You", "It"]
+    
+    # テキストを単語に分解（先頭の主語を見つけるため）
+    words = text.strip().split()
+    if not words:
+        return None
+        
+    first_word = words[0].replace(",", "").replace(".", "") # カンマなどの除去
+    
+    # 1. 先頭の単語が主語リストにある場合（例: "He succeeded...", "I succeeded...")
+    if first_word in explicit_subjects:
+        return first_word
+        
+    # 2. "I'm stressed..." のようなアポストロフィ付きの短縮形を救済
+    if first_word.startswith("I'm"):
+        return "I"
+        
+        return None
 
 def determine_subject(text):
     lexicon = get_lexicon()

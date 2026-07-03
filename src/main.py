@@ -1,4 +1,5 @@
 import json
+from rules.stage1_rule import determine_explicit_subject
 from rules.stage1_rule import determine_subject
 from rules.stage3_rule import analyze_causality
 from analyzer import LogicAnalyzer
@@ -14,11 +15,16 @@ def run_test(input_file):
 
     # main.py のループ内
     for text in examples:
-        # 1. まず判定する
-        subject_status = determine_subject(text)  # Stage 1 の判定を追加
-        causality_status = analyze_causality(text) # Stage 3 の判定を追加
+        explicit_status = determine_explicit_subject(text)
+        
+        if explicit_status:
+            subject_status = explicit_status
+        else:
+            subject_status = determine_subject(text)
+            
+        # 因果関係の判定は主語の有無に関わらず共通で実行
+        causality_status = analyze_causality(text)
 
-        # 2. その結果を使って、analyzerでログを作る
         log1 = analyzer.stage1_analyze(text, subject_status)
         log3 = analyzer.stage3_analyze(text, log1)
         
