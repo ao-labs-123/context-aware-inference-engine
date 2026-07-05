@@ -5,13 +5,13 @@ class LogicAnalyzer:
         self.lexicon = lexicon_data
 
     def stage1_analyze(self, text, subject_result):
-        if subject_result in ["I", "He", "She", "They", "We", "You", "It"]:
+        if subject_result in ["I", "He", "She", "They", "We", "You", "It"] or (subject_result and subject_result.startswith(("The", "A", "An"))):
             return {
                 "process": "Explicit Subject Present",
                 "decision": "Priority: Explicit Subject",
                 "agent": subject_result
                 }
-            
+
         # stage1_rule.py で判定した結果を受け取ります
         if subject_result == "Third-Person":
             return {
@@ -55,3 +55,31 @@ class LogicAnalyzer:
                 
                 return {"process": "No causality found", "mapping": "None"}
 
+    def stage4_analyze(self, text, modification_result,log1):
+        if not modification_result:
+            return {
+                "process": "Standard",
+                "decision": "None",
+                "structure": "No relative clause found"
+            }
+            
+        agent = log1.get("agent", "Unknown")
+
+        if modification_result["type"] == "Non-defining":
+            return {
+                "process": "Non-defining clause",
+                "decision": "Supplementary",
+                "result": f"AI treats '{modification_result['clause']}' as an attribute, not the primary identifier."
+            }
+            
+        elif modification_result["type"] == "Defining":
+            if agent == "I" or "I" in modification_result['clause']:
+                agent_note = f"links '{agent}' (Agent) to the specific {modification_result['antecedent'].lower()} as a defining marker."
+            else:
+                agent_note = f"defines the primary identity of '{modification_result['antecedent']}'."
+                
+                return {
+                "process": "Defining clause",
+                "decision": "Essential",
+                "result": f"AI {agent_note}"
+                }

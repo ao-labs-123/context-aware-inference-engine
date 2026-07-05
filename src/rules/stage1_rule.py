@@ -19,16 +19,19 @@ def determine_explicit_subject(text):
     if not words:
         return None
         
-    first_word = words[0].replace(",", "").replace(".", "") # カンマなどの除去
+    first_word = words[0].replace(",", "").replace(".", "").strip() # カンマなどの除去
     
-    # 1. 先頭の単語が主語リストにある場合（例: "He succeeded...", "I succeeded...")
     if first_word in explicit_subjects:
         return first_word
         
-    # 2. "I'm stressed..." のようなアポストロフィ付きの短縮形を救済
     if first_word.startswith("I'm"):
         return "I"
-        
+    
+    if first_word.startswith(("The", "A", "An")) and len(words) > 1:
+        second_word = words[1].replace(",", "").replace(".", "").strip()
+        return f"{first_word} {second_word}"
+
+
         return None
 
 def determine_subject(text):
