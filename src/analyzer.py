@@ -55,31 +55,36 @@ class LogicAnalyzer:
                 
                 return {"process": "No causality found", "mapping": "None"}
 
-    def stage4_analyze(self, text, modification_result,log1):
-        if not modification_result:
+    def stage4_analyze(self, text, modification_result, log1):
+        # 1. 完全に None だった場合、または辞書が空だった場合はここで安全に弾く
+        if modification_result is None or modification_result == {}:
             return {
                 "process": "Standard",
                 "decision": "None",
                 "structure": "No relative clause found"
             }
             
-        agent = log1.get("agent", "Unknown")
-
-        if modification_result["type"] == "Non-defining":
+        # 2. Stage 1 のログからエージェント（主語）を安全に取得
+        agent = log1.get("agent", "Unknown") if log1 else "Unknown"
+        
+        # 3. 非制限用法の判定ルート
+        if modification_result.get("type") == "Non-defining":
             return {
                 "process": "Non-defining clause",
                 "decision": "Supplementary",
                 "result": f"AI treats '{modification_result['clause']}' as an attribute, not the primary identifier."
             }
             
-        elif modification_result["type"] == "Defining":
-            if agent == "I" or "I" in modification_result['clause']:
+        # 4. 制限用法の判定ルート
+        elif modification_result.get("type") == "Defining":
+            # 節の中に "I" が含まれるか、Agent が "I" の場合
+            if agent == "I" or "I" in modification_result.get("clause", ""):
                 agent_note = f"links '{agent}' (Agent) to the specific {modification_result['antecedent'].lower()} as a defining marker."
             else:
                 agent_note = f"defines the primary identity of '{modification_result['antecedent']}'."
                 
-                return {
+            return {
                 "process": "Defining clause",
                 "decision": "Essential",
                 "result": f"AI {agent_note}"
-                }
+            }
