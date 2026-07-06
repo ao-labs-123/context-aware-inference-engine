@@ -3,6 +3,7 @@ from rules.stage1_rule import determine_explicit_subject
 from rules.stage1_rule import determine_subject
 from rules.stage3_rule import analyze_causality
 from rules.stage4_rule import analyze_modification_structure
+from rules.stage5_rule import analyze_semantic_structure
 from analyzer import LogicAnalyzer
 
 def run_test(input_file):
@@ -27,15 +28,18 @@ def run_test(input_file):
         causality_status = analyze_causality(text)
 
         mod_res = analyze_modification_structure(text)
+        mod_res = analyze_semantic_structure(text)
 
         log1 = analyzer.stage1_analyze(text, subject_status)
         log3 = analyzer.stage3_analyze(text, log1)
         log4 = analyzer.stage4_analyze(text, mod_res,log1)
-        
+        log5 = analyzer.stage5_analyze(text, mod_res,log1)
+
         print(f"Input: {text}")
         print(f"Result: {log1}") 
         print(f"Result: {log3}") 
         print(f"Result: {log4}")
+        print(f"Result: {log5}")
 
         
 if __name__ == "__main__":
@@ -43,3 +47,4 @@ if __name__ == "__main__":
     run_test('/workspaces/context-aware-inference-engine/data/examples/stage1_input.json')
     run_test('/workspaces/context-aware-inference-engine/data/examples/stage3_input.json')
     run_test('/workspaces/context-aware-inference-engine/data/examples/stage4_input.json')
+    run_test('/workspaces/context-aware-inference-engine/data/examples/stage5_input.json')

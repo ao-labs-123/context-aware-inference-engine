@@ -88,3 +88,59 @@ class LogicAnalyzer:
                 "decision": "Essential",
                 "result": f"AI {agent_note}"
             }
+
+    
+    def stage5_analyze(self, text, semantic_result,log1):
+        if semantic_result is None:
+            return {
+                "process": "Standard",
+                "decision": "None",
+                "result": "Could not analyze semantic structure."
+            }
+            
+        form_type = semantic_result.get("form")
+        verb = semantic_result.get("verb", "").lower()
+        
+        # 状態動詞か動作動詞かを判定する簡易辞書ルール
+        # ※本来は lexicon ファイル等から読み込んでも良いです
+        stative_verbs = ["have", "has", "had", "know", "knows", "knew", "love", "loves", "like", "likes"]
+        
+        is_stative = any(v in verb for v in stative_verbs)
+        category = "Stative" if is_stative else "Action"
+        
+        # 形態（Form）に応じたロジック処理と出力結果の生成
+        if form_type == "Base":
+            process_log = f"[Morphology: Base] → [Category: {category}]"
+            if category == "Stative" and verb in ["have", "has", "had"]:
+                result_log = "Possession status."
+            else:
+                result_log = f"General {category.lower()} statement."
+                
+            return {
+                "process": process_log,
+                "result": result_log
+            }
+            
+        elif form_type == "Progressive":
+            # have が進行形（having）になると Stative から Action（意味の変容）に抽象化される
+            if "hav" in verb:
+                category = "Action"
+                result_log = "Active event participation."
+            else:
+                result_log = f"In-progress {category.lower()} event."
+                
+            return {
+                "process": f"[Morphology: be + V-ing] → [Category: {category}]",
+                "result": result_log
+            }
+            
+        elif form_type == "Passive":
+            actor = semantic_result.get("actor")
+            receiver = semantic_result.get("receiver")
+            
+            return {
+                "process": "[Passive: be + V-en + by]",
+                "result": f"Actor: {actor} / Receiver: {receiver}."
+            }
+            
+        return None
