@@ -5,12 +5,32 @@ class LogicAnalyzer:
         self.lexicon = lexicon_data
 
     def stage1_analyze(self, text, subject_result):
+    
+        if not subject_result:
+            return {
+                "process": "Null Subject",
+                "decision": "Clarification Required",
+                "agent": "Unknown"
+            }
+            
+        if isinstance(subject_result, dict) and subject_result.get("structure_type") == "FormalSubject":
+            true_agent = subject_result.get("true_agent")
+            predicate = subject_result.get("predicate")
+            
+            return {
+                "process": f"Formal Subject Detected (It ... that)",
+                "decision": "Priority: True Subject in Clause",
+                "agent": true_agent,
+                "structure": f"It is [{predicate}] that [{subject_result.get('that_clause')}]"
+            }
+
+
         if subject_result in ["I", "He", "She", "They", "We", "You", "It"] or (subject_result and subject_result.startswith(("The", "A", "An"))):
             return {
                 "process": "Explicit Subject Present",
                 "decision": "Priority: Explicit Subject",
                 "agent": subject_result
-                }
+            }
 
         # stage1_rule.py で判定した結果を受け取ります
         if subject_result == "Third-Person":
