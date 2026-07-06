@@ -29,6 +29,21 @@ This step focuses on optimizing the model's ability to interpret sentences with 
 
    If a sentence contains markers of evidentialities or indirect speech (e.g., 'seemingly', 'allegedly', 'they say', 'I heard', 'it is told'), treat the agent as a second or third party, overriding the speaker-default.
 
+**4. Formal Subject Framework (It ... that ...)**:
+
+When a sentence utilizes a dummy or formal subject structure (`It is/was [predicate] that...`), the system skips the surface-level `"It"` and extracts the actual logical agent from within the embedded clause.
+
+* **Input Example**: `"It is required that you submit the form."`
+* **Logic Process**: Bypasses dummy `"It"` $\rightarrow$ Recognizes the structural framework `It is [X] that [Y]` $\rightarrow$ Extracts the first word of the that-clause as the true agent.
+* **Result**:
+  ```json
+  {
+    "process": "Formal Subject Detected (It ... that)",
+    "decision": "Priority: True Subject in Clause",
+    "agent": "you",
+    "structure": "It is [required] that [you submit the form]"
+  }
+
 
 ## Logic Comparison: Implicit Subject vs. Evidential Override
 
