@@ -29,7 +29,7 @@ def run_test(input_file):
         causality_status = analyze_causality(text)
 
         mod_res = analyze_modification_structure(text)
-        mod_res = analyze_semantic_structure(text)
+        sem_res = analyze_semantic_structure(text)
 
         stage2_res = analyze_causality_and_ambiguity(text,subject_status)
 
@@ -73,8 +73,9 @@ def run_test(input_file):
     existing_logs.append(log_entry)
     
     # きれいに整形（indent=2）して保存
+    os.makedirs(os.path.dirname(log_file_path),exist_ok=True)
     with open(log_file_path, "w", encoding="utf-8") as f:
-        json.dump(existing_logs, f, indent=2, ensure_ascii=False)
+        json.dump(existing_logs, f, ensure_ascii=False,indent=4)
         
 if __name__ == "__main__":
     # 正しいデータファイルの場所を指定して実行
