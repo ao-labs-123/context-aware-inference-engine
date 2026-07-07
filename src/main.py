@@ -39,13 +39,42 @@ def run_test(input_file):
         log4 = analyzer.stage4_analyze(text, mod_res,log1)
         log5 = analyzer.stage5_analyze(text, mod_res,log1)
 
-        print(f"Input: {text}")
-        print(f"Result: {log1}")
-        print(f"Result: {log2}")
-        print(f"Result: {log3}") 
-        print(f"Result: {log4}")
-        print(f"Result: {log5}")
+        import os
 
+    from datetime import datetime
+
+    # ループの最後で、保存用の構造化データを作る
+    log_entry = {
+        "timestamp": datetime.now().isoformat(),
+        "input": text,
+        "stage1": log1,
+        "stage2": log2,
+        "stage3": log3,
+        "stage4": log4,
+        "stage5": log5
+    }
+    
+    # data/log.json に追記するロジック
+    log_file_path = "data/log.json"
+    
+    # ディレクトリがない場合は自動作成
+    os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+    
+    # 既存のログを読み込む（ファイルがない、または空なら空リスト）
+    existing_logs = []
+    if os.path.exists(log_file_path) and os.path.getsize(log_file_path) > 0:
+        try:
+            with open(log_file_path, "r", encoding="utf-8") as f:
+                existing_logs = json.load(f)
+        except json.JSONDecodeError:
+            existing_logs = []
+            
+    # 新しいログを末尾に追加
+    existing_logs.append(log_entry)
+    
+    # きれいに整形（indent=2）して保存
+    with open(log_file_path, "w", encoding="utf-8") as f:
+        json.dump(existing_logs, f, indent=2, ensure_ascii=False)
         
 if __name__ == "__main__":
     # 正しいデータファイルの場所を指定して実行
