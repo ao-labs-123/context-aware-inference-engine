@@ -50,6 +50,7 @@ def run_test(input_file):
 if __name__ == "__main__":
     # 正しいデータファイルの場所を指定して実行
     run_test('/workspaces/context-aware-inference-engine/data/examples/stage1_input.json')
+    run_test('/workspaces/context-aware-inference-engine/data/examples/stage2_input.json')
     run_test('/workspaces/context-aware-inference-engine/data/examples/stage3_input.json')
     run_test('/workspaces/context-aware-inference-engine/data/examples/stage4_input.json')
     run_test('/workspaces/context-aware-inference-engine/data/examples/stage5_input.json')
