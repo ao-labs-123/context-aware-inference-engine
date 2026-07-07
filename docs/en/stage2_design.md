@@ -21,6 +21,6 @@ By acknowledging that some sentences are genuinely ambiguous even to human liste
 
 | Input | Logic Process | Result |
 | :--- | :--- | :--- |
-| `"Succeeded because you helped."` | Null Subject + No Psychological Verb + No Evidential Marker $\rightarrow$ [Fallback: Ambiguous Clause] | AI triggers Stage 2 clarification (Undetermined agent). |
-| `"Failed despite the effort."` | Null Subject + No Contextual Clues + Action Verb $\rightarrow$ [Fallback: Completely Ambiguous] | AI triggers Stage 2 clarification (Undetermined agent). |
-| `"Required further investigation."` | Null Subject + Objective Obligation/State $\rightarrow$ [Fallback: Missing Formal/Logical Agent] | AI triggers Stage 2 clarification (Undetermined agent). |
+| "Succeeded because you helped." | Null Subject + No Psychological Verb + No Evidential Marker $\rightarrow$ [Fallback: Ambiguous Clause] | AI triggers Stage 2 clarification (Undetermined agent). |
+| "Failed despite the effort." | Null Subject + No Contextual Clues + Action Verb $\rightarrow$ [Fallback: Completely Ambiguous] | AI triggers Stage 2 clarification (Undetermined agent). |
+| "Required further investigation." | Null Subject + Objective Obligation/State $\rightarrow$ [Fallback: Missing Formal/Logical Agent] | AI triggers Stage 2 clarification (Undetermined agent). |
