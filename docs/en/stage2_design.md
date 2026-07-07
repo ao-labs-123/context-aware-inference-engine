@@ -20,6 +20,4 @@ By acknowledging that some sentences are genuinely ambiguous even to human liste
 ## Logic Comparison: Undetermined Agents
 | Input | Logic Process | Result |
 | :--- | :--- | :--- |
-| "Thought was strange." | Psychological Verb + Null Subject $\rightarrow$ [Default: Speaker] | AI assigns "I" as the agent. |
-| "Thought it was strange apparently." | Psychological Verb + Null Subject + Evidential Marker $\rightarrow$ [Override: 3rd Party] | AI assigns "He/She/They" as the agent. |
 | "Succeeded because you helped." | Null Subject + No Psychological Verb + No Evidential Marker $\rightarrow$ [Fallback: Ambiguous] | AI triggers Stage 2 clarification (Undetermined agent). |
