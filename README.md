@@ -1,4 +1,4 @@
-<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/22b28104-381e-42e4-b2b6-5df23bf8baed" />
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/1cc74eea-9db2-40e6-a047-82d058d70bae" />
 
 
 # Logic-based Linguistic Compression Engine
