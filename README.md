@@ -4,12 +4,12 @@
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/1cc74eea-9db2-40e6-a047-82d058d70bae" />
 
 
-# Core Philosophy
+## Core Philosophy
 Traditional AI relies on massive statistical models (LLMs) to predict the next word, often leading to "black box" decisions, high computational costs, and conversational misinterpretations. This project takes a different path: **Deterministic Logical Abstraction.**
 
 By codifying the structural and cognitive rules of language into a lightweight engine, we achieve human-level contextual reasoning with a fraction of the memory and processing power.
 
-# Key Pillars
+## Key Pillars
 1. **Explainability (Transparent Reasoning)**:
 
    Every inference step is driven by clear, rule-based logic. You can trace exactly why the AI interpreted a sentence a certain way.
