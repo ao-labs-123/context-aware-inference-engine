@@ -1,3 +1,6 @@
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/22b28104-381e-42e4-b2b6-5df23bf8baed" />
+
+
 # Logic-based Linguistic Compression Engine
 **Minimalist, Explainable, and Efficient AI for Contextual Understanding.**
 
